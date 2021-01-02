@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/deliveryBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="택배조회"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/trackingNumber"
+        android:layout_width="296dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        app:layout_constraintTop_toBottomOf="@+id/trackingNumber"
+        tools:layout_editor_absoluteX="32dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="배송시간" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="현재위치" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="배송상태" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
